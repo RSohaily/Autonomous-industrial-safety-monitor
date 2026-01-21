@@ -1,0 +1,141 @@
+{
+  "identity": {
+    "name": "E1",
+    "role": "The Anti-AI Designer",
+    "principles": [
+      "Fusion over Imitation",
+      "Emotion First (Safety & Precision)",
+      "Content is King (Data Clarity)",
+      "Zoom In (Detail Focus)",
+      "Negative Space (Breathing Room)",
+      "Contrast (High Visibility)"
+    ]
+  },
+  "theme_strategy": {
+    "mode": "dark",
+    "archetype": "Archetype 2: The Performance Pro (Industrial/Tactical)",
+    "reasoning": "Industrial environments require high contrast for safety. A 'Control Room' dark mode reduces eye strain for operators monitoring screens all day, while bright accent colors (Amber/Red) pop immediately for hazards."
+  },
+  "typography": {
+    "headings": {
+      "family": "Chivo",
+      "weights": ["700", "900"],
+      "usage": "Page titles, Section headers, Critical Alerts",
+      "letterSpacing": "tracking-tight"
+    },
+    "body": {
+      "family": "Manrope",
+      "weights": ["400", "500"],
+      "usage": "General UI text, descriptions, instructions"
+    },
+    "data": {
+      "family": "JetBrains Mono",
+      "weights": ["500"],
+      "usage": "Timestamps, ID numbers, Confidence scores, Sensor readings"
+    }
+  },
+  "colors": {
+    "background": {
+      "default": "#09090B",
+      "paper": "#18181B",
+      "subtle": "#27272A"
+    },
+    "primary": {
+      "name": "Safety Amber",
+      "main": "#F59E0B",
+      "hover": "#D97706",
+      "foreground": "#FFFFFF"
+    },
+    "secondary": {
+      "name": "System Blue",
+      "main": "#3B82F6",
+      "hover": "#2563EB",
+      "foreground": "#FFFFFF"
+    },
+    "status": {
+      "success": "#10B981",
+      "warning": "#F59E0B",
+      "danger": "#EF4444",
+      "info": "#3B82F6"
+    },
+    "border": {
+      "default": "#27272A",
+      "active": "#52525B"
+    }
+  },
+  "layout": {
+    "grid_system": "Bento Grid Mode B (High Density)",
+    "spacing": "Generous (p-6 to p-12) for containers, Tight (gap-4) for data grids",
+    "structure": {
+      "sidebar": "Fixed left, 64px (collapsed) or 240px (expanded), dark zinc bg",
+      "main": "Fluid width, centered max-w-7xl for dashboard view",
+      "dashboard": {
+        "hero": "col-span-full lg:col-span-8 row-span-2 (Upload/Vision Feed)",
+        "stats": "col-span-full lg:col-span-4 row-span-1 (Quick Stats)",
+        "history": "col-span-full lg:col-span-4 row-span-1 (Recent Logs)"
+      }
+    }
+  },
+  "components": {
+    "upload_zone": {
+      "style": "Tactical",
+      "animation": "Scanning beam effect on drag over",
+      "border": "Dashed 2px, Amber-500 on active",
+      "icon": "UploadCloud (Lucide) or Scan (Lucide)"
+    },
+    "cards": {
+      "style": "Sharp corners or minimal rounded-md (4px)",
+      "border": "1px solid border-zinc-800",
+      "effect": "Corner accents (L-shapes) in SVG for 'Tech' feel"
+    },
+    "buttons": {
+      "primary": "bg-amber-500 text-white hover:bg-amber-600 rounded-sm font-bold uppercase tracking-wider",
+      "secondary": "bg-zinc-800 text-zinc-300 hover:bg-zinc-700 rounded-sm"
+    },
+    "alerts": {
+      "style": "Solid background for high priority (Red/Amber), Bordered for low priority"
+    }
+  },
+  "assets": {
+    "images": [
+      {
+        "category": "background",
+        "url": "https://images.pexels.com/photos/4481256/pexels-photo-4481256.jpeg",
+        "description": "Industrial Warehouse Shelves"
+      },
+      {
+        "category": "component_example",
+        "url": "https://images.unsplash.com/photo-1738918908796-b02a5de5bdae?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxODh8MHwxfHNlYXJjaHwxfHxfbWV0YWwlMjBib2x0cyUyMGFuZCUyMG51dHMlMjBtYWNyb3xlbnwwfHx8fDE3NjkwMDQ0Nzd8MA&ixlib=rb-4.1.0&q=85",
+        "description": "Machine Part / Bolt"
+      },
+      {
+        "category": "hazard_example",
+        "url": "https://images.pexels.com/photos/6196280/pexels-photo-6196280.jpeg",
+        "description": "Industrial Floor Hazard"
+      }
+    ],
+    "icons": "Lucide React (default) + Phosphor Icons (for specific industrial symbols if needed)"
+  },
+  "visual_enhancers": {
+    "glassmorphism": "Used sparingly on overlays (e.g., scanning results)",
+    "gradients": "Subtle 'Glow' gradients behind active cards (Amber/Blue)",
+    "textures": "Subtle noise overlay on the dark background to prevent banding and add 'grit'"
+  },
+  "instructions_to_main_agent": [
+    "1. INSTALL FONTS: Add Chivo, Manrope, and JetBrains Mono via Google Fonts in index.html or CSS.",
+    "2. SETUP THEME: Configure tailwind.config.js with the 'Zinc' and 'Amber' palette defined above.",
+    "3. BUILD LAYOUT: Create the SidebarLayout component first. It should be persistent.",
+    "4. CREATE UPLOAD: Build the 'VisionUpload' component with drag-and-drop. Use framer-motion for a 'scanning' line animation when analyzing.",
+    "5. RESULTS VIEW: When an image is uploaded, show a 'AnalysisResult' component. Use the 'Bento' grid to show: Detected Items (List), Safety Score (Gauge/Chart), and Recommended Actions (Big Cards).",
+    "6. MOCK DATA: If backend is not ready, mock the analysis response with 'M8 Bolt detected' or 'Oil Spill detected' to demonstrate UI states.",
+    "7. USE SONNER: For all notifications (e.g., 'Analysis Complete', 'Hazard Detected').",
+    "8. DATA-TESTID: Add data-testid to the Upload Dropzone, Analyze Button, and Result Cards."
+  ],
+  "universal_guidelines": [
+    "Do not use gradients for text.",
+    "Avoid 'Inter' for headings.",
+    "Use 2-3x more padding than usual.",
+    "Dark mode is the default.",
+    "All interactive elements must have hover states."
+  ]
+}
